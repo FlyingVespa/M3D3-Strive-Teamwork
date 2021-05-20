@@ -6,17 +6,17 @@
 
         Starting from the current "base" bootstrap layout, implement the following exercise:
 
-        1) When pressing on Load Images button, load the pictures from http://www.splashbase.co/api/v1/images/search?query=your query
-        2) When pressing on Load Seconday Images, load the pictures from http://www.splashbase.co/api/v1/images/search?query=your secondary query
-        3) When the user clicks on the "VIEW" button inside the Card, open the specified image in a modal view
-        4) The Edit button should be replace with a "Hide" button. 
-        5) When the hide button is pressed, the whole picture card disappears.
-        6) Replace the "9 mins" string in the card template with the ID of the Image
+        1)✅When pressing on Load Images button, load the pictures from http://www.splashbase.co/api/v1/images/search?query=your query
+        2)✅ When pressing on Load Seconday Images, load the pictures from http://www.splashbase.co/api/v1/images/search?query=your secondary query
+        3)⏪When the user clicks on the "VIEW" button inside the Card, open the specified image in a modal view
+        4)✅ The Edit button should be replace with a "Hide" button. 
+        5)⏪ When the hide button is pressed, the whole picture card disappears.
+        6)⏪Replace the "9 mins" string in the card template with the ID of the Image
         
         [EXTRA]
-        7) Add in the "jumbotron" a search field. If there is a value there and the user press "Load Seconday Image" the API call should use the specified query as query
+        7)⏪Add in the "jumbotron" a search field. If there is a value there and the user press "Load Seconday Image" the API call should use the specified query as query
         8) After every button is pressed, display in an alert for 5 seconds the result of the operation (es.: 20 images loaded)
-        9) Handle API error gracefully using alert components with the message inside
+        9) ✅Handle API error gracefully using alert components with the message inside
         10) Add at the bottom of the page a carousel with "forest" images loaded by another API call
 
         [EVEN MORE EXTRA]
@@ -56,6 +56,10 @@
     />
 
     <style>
+      .hidden-image {
+        color: red;
+        visibility: hidden;
+      }
       .modal-image {
         height: 500px;
       }
@@ -234,7 +238,6 @@
                   >
                     <div class="btn-group">
                       <button
-                        onclick="myModal()"
                         data-toggle="modal"
                         data-target="#exampleModal"
                         type="button"
@@ -649,44 +652,9 @@
       >
         Launch demo modal
       </button>
-
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">...</div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                Save changes
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!---------HomeWork Modal & Carousel--------->
+      <div class="myModalDiv"></div>
+      <div class="myCarouselDiv"></div>
     </main>
 
     <footer class="text-muted">
@@ -700,7 +668,7 @@
         </p>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
